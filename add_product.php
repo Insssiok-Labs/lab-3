@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bindValue(':price', $price);
 
     if ($stmt->execute()) {
-        echo "<script>alert('Product added successfully.'); window.location.href='index.php';</script>";
+        Header("Location: index.php");
     } else {
         echo "<script>alert('Error adding product.');</script>";
     }
